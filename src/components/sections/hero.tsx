@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 export function Hero() {
   return (
     <section aria-labelledby="hero-heading" className="border-b border-border/60">
-      <Container className="flex min-h-[calc(100svh-4rem)] flex-col justify-center py-20 sm:py-24 lg:py-28">
+      <Container className="flex flex-col justify-center py-14 sm:py-16 lg:py-20">
         <div className="max-w-3xl">
           <p className="text-sm font-medium tracking-wide text-muted-foreground">
             {siteConfig.name} · {siteConfig.designation}
@@ -16,16 +16,16 @@ export function Hero() {
 
           <h1
             id="hero-heading"
-            className="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
+            className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
           >
             {siteConfig.headline}
           </h1>
 
-          <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
             {siteConfig.summary}
           </p>
 
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link
               href="#experience"
               className={cn(

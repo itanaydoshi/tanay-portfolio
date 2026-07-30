@@ -25,16 +25,16 @@ export function Section({
       id={id}
       aria-labelledby={headingId}
       className={cn(
-        "scroll-mt-24 border-t border-border/60 py-16 sm:py-20 lg:py-24",
+        "scroll-mt-20 border-t border-border/60 py-12 sm:py-14 lg:py-16",
         className
       )}
     >
       <Container>
         <div
           className={cn(
-            "mb-10 sm:mb-12",
+            "mb-6 sm:mb-8",
             actions &&
-              "flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between"
+              "flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between"
           )}
         >
           <div className="max-w-2xl">
@@ -45,7 +45,7 @@ export function Section({
               {title}
             </h2>
             {description ? (
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground sm:text-lg">
+              <p className="mt-2 text-base leading-relaxed text-muted-foreground sm:text-lg">
                 {description}
               </p>
             ) : null}

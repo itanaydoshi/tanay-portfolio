@@ -17,12 +17,28 @@ const satoshi = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: `${siteConfig.name} — ${siteConfig.designation}`,
+    default: siteConfig.seo.title,
     template: `%s — ${siteConfig.name}`,
   },
-  description: siteConfig.summary,
+  description: siteConfig.seo.description,
+  keywords: siteConfig.seo.keywords,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
+  openGraph: {
+    title: siteConfig.seo.title,
+    description: siteConfig.seo.description,
+    type: "website",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary",
+    title: siteConfig.seo.title,
+    description: siteConfig.seo.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({

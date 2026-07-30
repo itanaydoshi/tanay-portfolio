@@ -5,13 +5,13 @@ import { overview } from "@/data/content";
 export function Overview() {
   return (
     <Section id="overview" title={overview.title} description={overview.intro}>
-      <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
-        <div className="space-y-8">
+      <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
+        <div className="space-y-6">
           <div>
             <h3 className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
               Product surfaces
             </h3>
-            <ul className="mt-4 space-y-2.5">
+            <ul className="mt-3 space-y-2">
               {overview.productTypes.map((item) => (
                 <li key={item} className="text-sm leading-relaxed sm:text-base">
                   {item}
@@ -24,7 +24,7 @@ export function Overview() {
             <h3 className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
               Domains
             </h3>
-            <ul className="mt-4 flex flex-wrap gap-2">
+            <ul className="mt-3 flex flex-wrap gap-2">
               {overview.industries.map((item) => (
                 <li key={item}>
                   <Badge>{item}</Badge>
@@ -34,12 +34,12 @@ export function Overview() {
           </div>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6">
           <div>
             <h3 className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
               Engineering approach
             </h3>
-            <ul className="mt-4 space-y-3">
+            <ul className="mt-3 space-y-2">
               {overview.philosophy.map((item) => (
                 <li
                   key={item}
@@ -55,7 +55,7 @@ export function Overview() {
             <h3 className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
               Daily stack
             </h3>
-            <ul className="mt-4 flex flex-wrap gap-2">
+            <ul className="mt-3 flex flex-wrap gap-2">
               {overview.dailyStack.map((item) => (
                 <li key={item}>
                   <Badge>{item}</Badge>

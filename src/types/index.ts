@@ -3,19 +3,24 @@ export type SocialLink = {
   href: string;
 };
 
+export type SeoConfig = {
+  title: string;
+  description: string;
+  keywords: string[];
+};
+
 export type SiteConfig = {
   name: string;
   designation: string;
   headline: string;
   summary: string;
   email: string;
-  phone?: string;
-  location?: string;
+  location: string;
   resumeUrl: string;
+  seo: SeoConfig;
   socials: {
     linkedin: string;
     github: string;
-    portfolio: string;
   };
 };
 
@@ -48,15 +53,6 @@ export type ExperienceItem = {
   products: string[];
   highlights: string[];
   techStack: string[];
-};
-
-export type EducationItem = {
-  id: string;
-  institution: string;
-  degree: string;
-  startDate: string;
-  endDate: string;
-  details?: string;
 };
 
 export type SkillCategory = {
