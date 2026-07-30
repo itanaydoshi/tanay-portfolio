@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="mt-auto border-t border-border/60">
       <Container className="flex items-center justify-between gap-4 py-6">
         <p className="text-sm text-muted-foreground">
-          Copyright © 2026 {siteConfig.name}
+          Copyright © {new Date().getFullYear()} {siteConfig.name}
         </p>
         <p className="text-sm text-muted-foreground">{siteConfig.location}</p>
       </Container>
