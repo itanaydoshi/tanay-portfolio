@@ -34,7 +34,7 @@ export function Experience() {
             <article className="grid gap-4 border-t border-border pt-6 lg:grid-cols-[200px_1fr] lg:gap-10">
               <div className="space-y-1 text-sm text-muted-foreground">
                 <p>
-                  {role.startDate} — {role.endDate}
+                  {role.startDate} - {role.endDate}
                 </p>
                 <p>{role.location}</p>
               </div>
