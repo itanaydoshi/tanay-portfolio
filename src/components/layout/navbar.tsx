@@ -65,7 +65,7 @@ export function Navbar() {
       <Container className="flex h-14 items-center justify-between gap-4 sm:h-16">
         <Link
           href="/"
-          className="text-sm font-semibold tracking-tight"
+          className="text-base font-bold tracking-tight text-foreground transition-opacity hover:opacity-80 sm:text-lg"
           onClick={() => setOpen(false)}
         >
           {siteConfig.name}
