@@ -41,8 +41,8 @@ export const siteConfig: SiteConfig = {
     ],
   },
   socials: {
-    linkedin: "https://www.linkedin.com/in/tanaydoshi",
-    github: "https://github.com/tanaydoshi",
+    linkedin: "https://www.linkedin.com/in/itanaydoshi",
+    github: "https://github.com/itanaydoshi",
   },
 };
 
