@@ -56,7 +56,7 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const overview: OverviewContent = {
-  title: "What I Build",
+  title: "What I Built",
   intro:
     "I develop frontend for web and mobile products — admin platforms, partner apps, and camera-based workflows. Day to day I work with TypeScript, React, Next.js, and React Native, integrate REST APIs, and ship features to production.",
   industries: ["Security", "Logistics", "Healthcare"],
