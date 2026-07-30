@@ -1,6 +1,7 @@
 "use client";
 
 import { MenuIcon, MoonIcon, SunIcon, XIcon } from "lucide-react";
+import { useLenis } from "lenis/react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
@@ -39,6 +40,7 @@ function ThemeToggle() {
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const lenis = useLenis();
 
   useEffect(() => {
     if (!open) return;
@@ -48,13 +50,15 @@ export function Navbar() {
     };
 
     document.addEventListener("keydown", onKeyDown);
+    lenis?.stop();
     document.body.style.overflow = "hidden";
 
     return () => {
       document.removeEventListener("keydown", onKeyDown);
+      lenis?.start();
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [open, lenis]);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background">
