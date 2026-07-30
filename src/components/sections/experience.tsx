@@ -1,11 +1,12 @@
-import { DownloadIcon } from "lucide-react";
-import Link from "next/link";
+// import { DownloadIcon } from "lucide-react";
+// import Link from "next/link";
 
 import { Section } from "@/components/layout/section";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
-import { experience, experienceIntro, siteConfig } from "@/data/content";
-import { cn } from "@/lib/utils";
+// import { buttonVariants } from "@/components/ui/button";
+import { experience, experienceIntro } from "@/data/content";
+// import { siteConfig } from "@/data/content";
+// import { cn } from "@/lib/utils";
 
 export function Experience() {
   return (
@@ -13,19 +14,19 @@ export function Experience() {
       id="experience"
       title="Experience"
       description={experienceIntro}
-      actions={
-        <Link
-          href={siteConfig.resumeUrl}
-          download
-          className={cn(
-            buttonVariants({ variant: "outline", size: "lg" }),
-            "w-full shrink-0 gap-2 px-5 sm:w-auto"
-          )}
-        >
-          <DownloadIcon />
-          Resume
-        </Link>
-      }
+      // actions={
+      //   <Link
+      //     href={siteConfig.resumeUrl}
+      //     download
+      //     className={cn(
+      //       buttonVariants({ variant: "outline", size: "lg" }),
+      //       "w-full shrink-0 gap-2 px-5 sm:w-auto"
+      //     )}
+      //   >
+      //     <DownloadIcon />
+      //     Resume
+      //   </Link>
+      // }
     >
       <ol className="space-y-8">
         {experience.map((role) => (

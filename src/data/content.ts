@@ -12,11 +12,16 @@ export const siteConfig: SiteConfig = {
   name: "Tanay Doshi",
   designation: "Software Developer",
   headline:
-    "I build production web and mobile products with React, Next.js, and React Native — focused on performance, clean architecture, and reliable delivery.",
+    "I build production web and mobile products with React, Next.js, and React Native - focused on performance, clean architecture, and reliable delivery.",
   summary:
     "2+ years of frontend work across security, logistics, and healthcare — integrating APIs and shipping features from development to production.",
   email: "tanaydoshi84@gmail.com",
   location: "India",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL
+      ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+      : "http://localhost:3000"),
   resumeUrl: "/resume.pdf",
   seo: {
     title:

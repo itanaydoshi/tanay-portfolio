@@ -16,6 +16,7 @@ export type SiteConfig = {
   summary: string;
   email: string;
   location: string;
+  url: string;
   resumeUrl: string;
   seo: SeoConfig;
   socials: {

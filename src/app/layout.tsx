@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 
 import { Footer } from "@/components/layout/footer";
@@ -17,22 +17,28 @@ const satoshi = localFont({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.seo.title,
     template: `%s — ${siteConfig.name}`,
   },
   description: siteConfig.seo.description,
   keywords: siteConfig.seo.keywords,
-  authors: [{ name: siteConfig.name }],
+  applicationName: siteConfig.name,
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
+  publisher: siteConfig.name,
+  category: "technology",
   openGraph: {
     title: siteConfig.seo.title,
     description: siteConfig.seo.description,
     type: "website",
     locale: "en_IN",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: siteConfig.seo.title,
     description: siteConfig.seo.description,
   },
@@ -40,6 +46,17 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0a0a" },
+  ],
+  colorScheme: "light dark",
 };
 
 export default function RootLayout({
