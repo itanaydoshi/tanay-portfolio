@@ -50,7 +50,6 @@ export type ExperienceItem = {
   startDate: string;
   endDate: string;
   summary: string;
-  products: string[];
   highlights: string[];
   techStack: string[];
 };
@@ -64,8 +63,5 @@ export type SkillCategory = {
 export type OverviewContent = {
   title: string;
   intro: string;
-  productTypes: string[];
   industries: string[];
-  philosophy: string[];
-  dailyStack: string[];
 };

@@ -48,19 +48,6 @@ export function Experience() {
                   {role.summary}
                 </p>
 
-                <div className="mt-4">
-                  <h4 className="text-xs font-medium tracking-wide text-muted-foreground uppercase">
-                    Products
-                  </h4>
-                  <ul className="mt-2 flex flex-wrap gap-2">
-                    {role.products.map((product) => (
-                      <li key={product}>
-                        <Badge>{product}</Badge>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
                 <ul className="mt-4 space-y-2">
                   {role.highlights.map((highlight) => (
                     <li
