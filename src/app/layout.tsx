@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 
+import { JsonLd } from "@/components/json-ld";
 import { Footer } from "@/components/layout/footer";
 import { Navbar } from "@/components/layout/navbar";
 import { SmoothScroll } from "@/components/smooth-scroll";
@@ -71,6 +72,7 @@ export default function RootLayout({
       className={`${satoshi.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
+        <JsonLd />
         <ThemeProvider>
           <SmoothScroll>
             <a
