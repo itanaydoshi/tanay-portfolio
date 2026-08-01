@@ -44,7 +44,7 @@ export function getJsonLd() {
         "@id": personId,
         name: siteConfig.name,
         url: siteConfig.url,
-        image: `${siteConfig.url}/opengraph-image`,
+        image: `${siteConfig.url}/icons/icon-512.png`,
         jobTitle: siteConfig.designation,
         description: siteConfig.summary,
         email: `mailto:${siteConfig.email}`,
