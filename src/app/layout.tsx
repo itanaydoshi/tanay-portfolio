@@ -37,20 +37,11 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: "/icons/icon-512.png",
-        width: 512,
-        height: 512,
-        alt: `${siteConfig.name}, Software Developer`,
-      },
-    ],
   },
   twitter: {
     card: "summary",
     title: siteConfig.seo.title,
     description: siteConfig.seo.description,
-    images: ["/icons/icon-512.png"],
   },
   robots: {
     index: true,
