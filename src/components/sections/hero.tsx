@@ -10,13 +10,9 @@ export function Hero() {
     <section aria-labelledby="hero-heading" className="border-b border-border/60">
       <Container className="flex flex-col justify-center py-14 sm:py-16 lg:py-20">
         <div className="max-w-3xl">
-          <p className="text-sm font-medium tracking-wide text-muted-foreground">
-            {siteConfig.name} · {siteConfig.designation}
-          </p>
-
           <h1
             id="hero-heading"
-            className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
+            className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]"
           >
             {siteConfig.headline}
           </h1>
