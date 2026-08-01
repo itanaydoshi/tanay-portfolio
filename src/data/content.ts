@@ -12,9 +12,9 @@ export const siteConfig: SiteConfig = {
   name: "Tanay Doshi",
   designation: "Software Developer",
   headline:
-    "I build production web and mobile products with React, Next.js, and React Native - focused on performance, clean architecture, and reliable delivery.",
+    "I build production web and mobile products with React, Next.js, and React Native, with a focus on performance, clean architecture, and reliable delivery.",
   summary:
-    "2+ years of frontend experience across security, logistics, and healthcare - integrating APIs and shipping features from development to production.",
+    "I have over two years of frontend experience across security, logistics, and healthcare. I integrate APIs and ship features from development through production.",
   email: "tanaydoshi84@gmail.com",
   location: "India",
   url:
@@ -25,9 +25,9 @@ export const siteConfig: SiteConfig = {
   resumeUrl: "/resume.pdf",
   seo: {
     title:
-      "Tanay Doshi | Software Developer - React, Next.js & React Native",
+      "Tanay Doshi | Software Developer | React, Next.js & React Native",
     description:
-      "Tanay Doshi is a software developer with 2+ years of frontend experience building production web and mobile apps with React, Next.js, React Native, and TypeScript across security, logistics, and healthcare.",
+      "Tanay Doshi is a software developer with 2+ years of experience building production React, Next.js, and React Native apps across security, logistics, and healthcare.",
     keywords: [
       "Tanay Doshi",
       "Software Developer",
@@ -35,7 +35,7 @@ export const siteConfig: SiteConfig = {
       "React Developer",
       "Next.js Developer",
       "React Native Developer",
-      "TypeScript",
+      "TypeScript Developer",
       "Mobile App Developer",
       "India",
     ],
@@ -49,7 +49,7 @@ export const siteConfig: SiteConfig = {
 export const navItems: NavItem[] = [
   { label: "Overview", href: "#overview" },
   { label: "Experience", href: "#experience" },
-  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#projects" },
   { label: "Stack", href: "#stack" },
   { label: "Contact", href: "#contact" },
 ];
@@ -61,14 +61,14 @@ export const socialLinks: SocialLink[] = [
 ];
 
 export const overview: OverviewContent = {
-  title: "What I Built",
+  title: "Overview",
   intro:
-    "I build the frontend for web and mobile products - admin platforms, partner apps, and camera-based workflows. Day to day, I work with TypeScript, React, Next.js, and React Native, integrate REST APIs, and ship features to production.",
+    "I build frontends for web and mobile products, including admin platforms, partner apps, and camera-based workflows. Day to day, I work with TypeScript, React, Next.js, and React Native, integrate REST APIs, and ship features to production.",
   industries: ["Security", "Logistics", "Healthcare"],
 };
 
 export const experienceIntro =
-  "Frontend work across web platforms and mobile apps - from feature development through production release.";
+  "Frontend work across web platforms and mobile apps, from feature development through production release.";
 
 export const experience: ExperienceItem[] = [
   {
@@ -81,7 +81,7 @@ export const experience: ExperienceItem[] = [
     summary:
       "Building web platforms with Next.js, TypeScript, and modern UI systems.",
     highlights: [
-      "Built a searchable CVE portal and responsive admin surfaces with Next.js, TypeScript, and Supabase.",
+      "Built a searchable CVE portal and responsive admin interfaces with Next.js, TypeScript, and Supabase.",
       "Shipped an AI-assisted article pipeline with live preview to speed up content publishing.",
     ],
     techStack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase", "OpenAI"],
@@ -94,17 +94,17 @@ export const experience: ExperienceItem[] = [
     startDate: "Feb 2024",
     endDate: "Mar 2026",
     summary:
-      "Worked on the mobile application team, building cross-platform apps with React Native.",
+      "Worked on mobile application development, building cross-platform React Native apps.",
     highlights: [
-      "Built partner order assignment, tracking, and payment flows with Redux Toolkit and REST APIs.",
-      "Developed a live camera capture and preprocessing pipeline for AI-backed diagnostic analysis.",
+      "Built partner flows for assigned buckets, priority-based orders, delivery tracking, and payments with Redux Toolkit and REST APIs.",
+      "Developed a live camera capture and image preprocessing pipeline for KidneyCheQ, integrating with AI-backed diagnostic analysis on Android.",
     ],
     techStack: ["TypeScript", "React Native", "Redux Toolkit", "REST APIs"],
   },
 ];
 
 export const projectsIntro =
-  "Selected projects with problem context, technical approach, and outcomes.";
+  "Projects with problem context, technical approach, and outcomes.";
 
 export const projects: Project[] = [
   {
@@ -112,13 +112,13 @@ export const projects: Project[] = [
     name: "AppSecure Vulnerability CMS",
     domain: "Security",
     summary:
-      "Web CMS for browsing CVEs and managing editorial publishing for security content teams.",
+      "A web CMS for browsing CVEs and managing editorial publishing for security content teams.",
     challenge:
-      "CVE content needed to stay searchable and publishable without slow, fully manual workflows.",
+      "CVE content needed to stay searchable and easy to publish without slow, fully manual workflows.",
     approach:
       "Built a Next.js and TypeScript portal with Supabase, REST admin flows, and OpenAI-assisted drafts with live preview.",
     outcome:
-      "Faster path from research to published guidance, with admin control over content quality.",
+      "Shortened the path from research to published guidance, while keeping admin control over content quality.",
     techStack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase", "OpenAI"],
   },
   {
@@ -126,13 +126,13 @@ export const projects: Project[] = [
     name: "Delish Delivery Partner",
     domain: "Logistics",
     summary:
-      "Cross-platform partner app for order assignment, delivery tracking, and payment status.",
+      "An Android and iOS app for delivery partners to view assigned buckets and orders, follow priority, and manage the full delivery flow.",
     challenge:
-      "Delivery partners needed accurate order status during frequent operational and payment updates.",
+      "Delivery partners needed a clear view of assigned buckets, priority orders, and status updates throughout the delivery cycle.",
     approach:
-      "Built React Native screens with REST sync and Redux Toolkit for predictable client state.",
+      "Built React Native screens for Android and iOS with REST sync and Redux Toolkit so partners could track assignments, priority, and order progress in one place.",
     outcome:
-      "Clearer order lifecycle visibility for partners during day-to-day delivery operations.",
+      "Partners could follow assigned work by priority and complete the full order flow with clearer day-to-day visibility.",
     techStack: ["TypeScript", "React Native", "Redux Toolkit", "REST APIs"],
   },
   {
@@ -140,13 +140,13 @@ export const projects: Project[] = [
     name: "KidneyCheQ",
     domain: "Healthcare",
     summary:
-      "Real-time diagnostics app with on-device camera capture and AI-backed analysis.",
+      "An Android app for at-home kidney health testing, using the phone camera to capture a reagent device and send frames for AI analysis.",
     challenge:
-      "Diagnostic quality depended on stable live frame capture and preprocessing across Android devices.",
+      "Results depended on stable live camera capture and image preprocessing across Android devices, including lighting, angle, and color variation.",
     approach:
-      "Built a camera capture pipeline with preprocessing and integration to an AI analysis service.",
+      "Built a live camera capture and preprocessing pipeline in React Native, then integrated it with a cloud AI service for diagnostic analysis.",
     outcome:
-      "Reliable camera-driven diagnostic flow, validated across tested Android devices.",
+      "Delivered a reliable camera-to-result flow on Android, with corrected frames ready for AI inference.",
     techStack: ["React Native", "Camera Pipeline", "AI Integration"],
   },
 ];

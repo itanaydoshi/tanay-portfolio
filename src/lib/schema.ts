@@ -23,7 +23,7 @@ export function getJsonLd() {
         "@type": "ProfilePage",
         "@id": profileId,
         url: siteConfig.url,
-        name: siteConfig.seo.title,
+        name: `${siteConfig.name} | Portfolio`,
         description: siteConfig.seo.description,
         isPartOf: { "@id": websiteId },
         about: { "@id": personId },
@@ -75,8 +75,8 @@ export function getJsonLd() {
       {
         "@type": "ItemList",
         "@id": `${siteConfig.url}/#projects`,
-        name: "Selected Projects",
-        description: "Selected projects by Tanay Doshi",
+        name: "Projects",
+        description: `Projects by ${siteConfig.name} across security, logistics, and healthcare.`,
         numberOfItems: projects.length,
         itemListElement: projects.map((project, index) => ({
           "@type": "ListItem",

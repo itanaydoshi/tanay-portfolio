@@ -32,13 +32,13 @@ export function Hero() {
               View Experience
             </Link>
             <Link
-              href="#work"
+              href="#projects"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
                 "w-full justify-center px-5 sm:w-auto"
               )}
             >
-              Selected Work
+              View Projects
             </Link>
           </div>
         </div>

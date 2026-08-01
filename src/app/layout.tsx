@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.seo.title,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.seo.description,
   keywords: siteConfig.seo.keywords,
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
         url: "/icons/icon-512.png",
         width: 512,
         height: 512,
-        alt: `${siteConfig.name} logo`,
+        alt: `${siteConfig.name}, Software Developer`,
       },
     ],
   },
@@ -55,9 +55,13 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
   },
   alternates: {
-    canonical: siteConfig.url,
+    canonical: "/",
   },
 };
 

@@ -9,10 +9,7 @@ import {
 export function getLlmsTxt(): string {
   const base = siteConfig.url.replace(/\/$/, "");
   const skills = skillCategories
-    .map(
-      (category) =>
-        `${category.name}: ${category.skills.join(", ")}`,
-    )
+    .map((category) => `${category.name}: ${category.skills.join(", ")}`)
     .join("; ");
 
   const experienceLines = experience
@@ -37,27 +34,27 @@ ${siteConfig.name} is a ${siteConfig.designation} based in ${siteConfig.location
 
 Experience: ${experienceLines}
 
-Selected work: ${projectLines}
+Projects: ${projectLines}
 
 Skills: ${skills}.
 
 ## Pages
 
-- [Portfolio](${base}/): Personal portfolio with overview, experience, projects, stack, and contact
+- [Portfolio](${base}/): Personal portfolio covering overview, experience, projects, stack, and contact
 - [Resume](${base}${siteConfig.resumeUrl}): Downloadable PDF resume
 
 ## Sections
 
 - [Overview](${base}/#overview): Summary of frontend work across web and mobile products
 - [Experience](${base}/#experience): Professional experience and shipped features
-- [Work](${base}/#work): Selected projects in security, logistics, and healthcare
-- [Stack](${base}/#stack): Frontend, APIs & data, and tooling skills
+- [Projects](${base}/#projects): Projects in security, logistics, and healthcare
+- [Stack](${base}/#stack): Frontend, APIs and data, and tooling skills
 - [Contact](${base}/#contact): Email and social links for opportunities
 
 ## Optional
 
 - [LinkedIn](${siteConfig.socials.linkedin}): Professional profile
-- [GitHub](${siteConfig.socials.github}): Open-source and code samples
+- [GitHub](${siteConfig.socials.github}): Code samples and open-source work
 - [Sitemap](${base}/sitemap.xml): Machine-readable list of public URLs
 - [Robots](${base}/robots.txt): Crawler access rules
 `;
