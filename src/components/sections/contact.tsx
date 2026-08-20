@@ -1,14 +1,13 @@
-import { MailIcon } from "lucide-react";
 import Link from "next/link";
 
+import { EmailCopyPopover } from "@/components/contact/email-copy-popover";
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 import { Section } from "@/components/layout/section";
 import { buttonVariants } from "@/components/ui/button";
-import { contactIntro, socialLinks } from "@/data/content";
+import { contactIntro, siteConfig, socialLinks } from "@/data/content";
 import { cn } from "@/lib/utils";
 
 const icons = {
-  Email: MailIcon,
   LinkedIn: LinkedInIcon,
   GitHub: GitHubIcon,
 } as const;
@@ -18,7 +17,14 @@ export function Contact() {
     <Section id="contact" title="Contact" description={contactIntro}>
       <ul className="flex flex-wrap gap-2">
         {socialLinks.map((link) => {
-          const isEmail = link.href.startsWith("mailto:");
+          if (link.label === "Email") {
+            return (
+              <li key={link.label}>
+                <EmailCopyPopover email={siteConfig.email} />
+              </li>
+            );
+          }
+
           const Icon = icons[link.label as keyof typeof icons];
 
           return (
@@ -26,9 +32,8 @@ export function Contact() {
               <Link
                 href={link.href}
                 aria-label={link.label}
-                {...(!isEmail
-                  ? { target: "_blank", rel: "noopener noreferrer" }
-                  : {})}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={cn(buttonVariants({ variant: "outline", size: "icon" }))}
               >
                 {Icon ? <Icon className="size-4" /> : null}

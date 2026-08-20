@@ -55,7 +55,7 @@ export const navItems: NavItem[] = [
 ];
 
 export const socialLinks: SocialLink[] = [
-  { label: "Email", href: `mailto:${siteConfig.email}` },
+  { label: "Email", href: siteConfig.email },
   { label: "LinkedIn", href: siteConfig.socials.linkedin },
   { label: "GitHub", href: siteConfig.socials.github },
 ];
