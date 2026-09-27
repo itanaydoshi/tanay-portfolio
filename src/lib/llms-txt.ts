@@ -5,6 +5,7 @@ import {
   siteConfig,
   skillCategories,
 } from "@/data/content";
+import { formatList } from "@/lib/utils";
 
 export function getLlmsTxt(): string {
   const base = siteConfig.url.replace(/\/$/, "");
@@ -12,17 +13,20 @@ export function getLlmsTxt(): string {
     .map((category) => `${category.name}: ${category.skills.join(", ")}`)
     .join("; ");
 
+  const industries = formatList(overview.industries);
+  const projectDomains = formatList(projects.map((project) => project.domain));
+
   const experienceLines = experience
     .map(
       (item) =>
-        `${item.role} at ${item.company} (${item.startDate}–${item.endDate}): ${item.summary}`,
+        `${item.role} at ${item.company} (${item.startDate}–${item.endDate}, ${item.location}): ${item.summary} ${item.highlights.join(" ")}`,
     )
     .join(" ");
 
   const projectLines = projects
     .map(
       (project) =>
-        `${project.name} (${project.domain}): ${project.summary}`,
+        `${project.name} (${project.domain}): ${project.summary} Tools: ${project.techStack.join(", ")}.`,
     )
     .join(" ");
 
@@ -45,9 +49,9 @@ Skills: ${skills}.
 
 ## Sections
 
-- [Overview](${base}/#overview): Summary of frontend work across web and mobile products
+- [Overview](${base}/#overview): Summary of web and mobile work across ${industries}
 - [Experience](${base}/#experience): Professional experience and shipped features
-- [Projects](${base}/#projects): Projects in security, logistics, and healthcare
+- [Projects](${base}/#projects): Projects in ${projectDomains}
 - [Stack](${base}/#stack): Frontend, APIs and data, and tooling skills
 - [Contact](${base}/#contact): Email and social links for opportunities
 

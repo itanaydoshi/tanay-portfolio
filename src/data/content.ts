@@ -14,7 +14,7 @@ export const siteConfig: SiteConfig = {
   headline:
     "I build production web and mobile products with React, Next.js, and React Native, with a focus on performance, clean architecture, and reliable delivery.",
   summary:
-    "I have over two years of frontend experience across security, logistics, and healthcare. I integrate APIs and ship features from development through production.",
+    "I have 2.5+ years of experience across security, logistics, healthcare, and e-commerce. I integrate APIs and ship features from development through production.",
   email: "tanaydoshi84@gmail.com",
   location: "India",
   url:
@@ -27,7 +27,7 @@ export const siteConfig: SiteConfig = {
     title:
       "Tanay Doshi | Software Developer | React, Next.js & React Native",
     description:
-      "Tanay Doshi is a software developer with 2+ years of experience building production React, Next.js, and React Native apps across security, logistics, and healthcare.",
+      "Tanay Doshi is a software developer with 2.5+ years of experience building production React, Next.js, and React Native apps across security, logistics, healthcare, and e-commerce.",
     keywords: [
       "Tanay Doshi",
       "Software Developer",
@@ -37,6 +37,7 @@ export const siteConfig: SiteConfig = {
       "React Native Developer",
       "TypeScript Developer",
       "Mobile App Developer",
+      "E-commerce",
       "India",
     ],
   },
@@ -64,17 +65,17 @@ export const overview: OverviewContent = {
   title: "Overview",
   intro:
     "I build frontends for web and mobile products, including admin platforms, partner apps, and camera-based workflows. Day to day, I work with TypeScript, React, Next.js, and React Native, integrate REST APIs, and ship features to production.",
-  industries: ["Security", "Logistics", "Healthcare"],
+  industries: ["Security", "Logistics", "Healthcare", "E-commerce"],
 };
 
 export const experienceIntro =
-  "Frontend work across web platforms and mobile apps, from feature development through production release.";
+  "Work across web platforms and mobile apps, from feature development through production release.";
 
 export const experience: ExperienceItem[] = [
   {
     id: "rudisn",
     company: "Rudisn",
-    role: "Frontend Developer",
+    role: "Software Developer",
     location: "Remote",
     startDate: "Apr 2026",
     endDate: "Present",
@@ -82,7 +83,7 @@ export const experience: ExperienceItem[] = [
       "Building web platforms with Next.js, TypeScript, and modern UI systems.",
     highlights: [
       "Built a searchable CVE portal and responsive admin interfaces with Next.js, TypeScript, and Supabase.",
-      "Shipped an AI-assisted article pipeline with live preview to speed up content publishing.",
+      "Shipped an AI-assisted article pipeline with live preview, cutting write-up drafting time by nearly 40%.",
     ],
     techStack: ["TypeScript", "Next.js", "Tailwind CSS", "Supabase", "OpenAI"],
   },
@@ -133,7 +134,7 @@ export const projects: Project[] = [
       "Built React Native screens for Android and iOS with REST sync and Redux Toolkit so partners could track assignments, priority, and order progress in one place.",
     outcome:
       "Partners could follow assigned work by priority and complete the full order flow with clearer day-to-day visibility.",
-    techStack: ["TypeScript", "React Native", "Redux Toolkit", "REST APIs"],
+    techStack: ["TypeScript", "React Native", "Redux Toolkit", "JWT", "Firebase"],
   },
   {
     id: "kidneycheq",
@@ -158,12 +159,30 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "frontend",
     name: "Frontend",
-    skills: ["TypeScript", "React", "Next.js", "React Native", "Tailwind CSS"],
+    skills: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "React Native",
+      "Expo",
+      "Tailwind CSS",
+      "Redux Toolkit",
+    ],
   },
   {
     id: "backend",
     name: "APIs & Data",
-    skills: ["REST APIs", "Supabase", "PostgreSQL"],
+    skills: [
+      "Node.js",
+      "NestJS",
+      "REST APIs",
+      "Supabase",
+      "PostgreSQL",
+      "MongoDB",
+      "JWT",
+      "Firebase",
+      "Razorpay",
+    ],
   },
   {
     id: "tools",

@@ -4,6 +4,7 @@ import {
   siteConfig,
   skillCategories,
 } from "@/data/content";
+import { formatList } from "@/lib/utils";
 
 export function getJsonLd() {
   const personId = `${siteConfig.url}/#person`;
@@ -76,7 +77,7 @@ export function getJsonLd() {
         "@type": "ItemList",
         "@id": `${siteConfig.url}/#projects`,
         name: "Projects",
-        description: `Projects by ${siteConfig.name} across security, logistics, and healthcare.`,
+        description: `Projects by ${siteConfig.name} across ${formatList(projects.map((project) => project.domain))}.`,
         numberOfItems: projects.length,
         itemListElement: projects.map((project, index) => ({
           "@type": "ListItem",
